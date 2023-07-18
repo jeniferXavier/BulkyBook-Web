@@ -6952,11 +6952,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jenifer\\source\\repos\\SampleApplication\\BulkyBook.Models\\BulkyBook.Models.csproj",
+      "projectUniqueName": "C:\\Users\\Jenifer\\source\\repos\\BulkyBook\\BulkyBook.Models\\BulkyBook.Models.csproj",
       "projectName": "BulkyBook.Models",
-      "projectPath": "C:\\Users\\Jenifer\\source\\repos\\SampleApplication\\BulkyBook.Models\\BulkyBook.Models.csproj",
+      "projectPath": "C:\\Users\\Jenifer\\source\\repos\\BulkyBook\\BulkyBook.Models\\BulkyBook.Models.csproj",
       "packagesPath": "C:\\Users\\Jenifer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jenifer\\source\\repos\\SampleApplication\\BulkyBook.Models\\obj\\",
+      "outputPath": "C:\\Users\\Jenifer\\source\\repos\\BulkyBook\\BulkyBook.Models\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Jenifer\\AppData\\Roaming\\NuGet\\NuGet.Config",

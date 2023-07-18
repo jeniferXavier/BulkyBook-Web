@@ -8623,11 +8623,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jenifer\\source\\repos\\SampleApplication\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\Jenifer\\source\\repos\\BulkyBook\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj",
       "projectName": "BulkyBook.DataAccess",
-      "projectPath": "C:\\Users\\Jenifer\\source\\repos\\SampleApplication\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj",
+      "projectPath": "C:\\Users\\Jenifer\\source\\repos\\BulkyBook\\BulkyBook.DataAccess\\BulkyBook.DataAccess.csproj",
       "packagesPath": "C:\\Users\\Jenifer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jenifer\\source\\repos\\SampleApplication\\BulkyBook.DataAccess\\obj\\",
+      "outputPath": "C:\\Users\\Jenifer\\source\\repos\\BulkyBook\\BulkyBook.DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Jenifer\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8644,8 +8644,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Jenifer\\source\\repos\\SampleApplication\\BulkyBook.Models\\BulkyBook.Models.csproj": {
-              "projectPath": "C:\\Users\\Jenifer\\source\\repos\\SampleApplication\\BulkyBook.Models\\BulkyBook.Models.csproj"
+            "C:\\Users\\Jenifer\\source\\repos\\BulkyBook\\BulkyBook.Models\\BulkyBook.Models.csproj": {
+              "projectPath": "C:\\Users\\Jenifer\\source\\repos\\BulkyBook\\BulkyBook.Models\\BulkyBook.Models.csproj"
             }
           }
         }

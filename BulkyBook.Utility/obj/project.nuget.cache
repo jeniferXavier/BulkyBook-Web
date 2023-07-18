@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pLPpkIClbi9f4qejOvxsLs4Ep14JIncz1nmkRpjB6EGlQrsI4Ymxro4XuqXqmAWAhOW0AHMqV0bQMBB8GoWGRQ==",
+  "dgSpecHash": "X5NLdgEBm5usnlHD2Muhn5Qzq04NJuAAol5lJuOu4/1LLBGDMM3UVVJIsAkPOSEnJ0Mnbp6Q/sCBHH0ja7GyQw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Jenifer\\source\\repos\\SampleApplication\\BulkyBook.Utility\\BulkyBook.Utility.csproj",
+  "projectFilePath": "C:\\Users\\Jenifer\\source\\repos\\BulkyBook\\BulkyBook.Utility\\BulkyBook.Utility.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

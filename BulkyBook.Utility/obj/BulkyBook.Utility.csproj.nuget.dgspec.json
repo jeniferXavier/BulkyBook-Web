@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jenifer\\source\\repos\\SampleApplication\\BulkyBook.Utility\\BulkyBook.Utility.csproj": {}
+    "C:\\Users\\Jenifer\\source\\repos\\BulkyBook\\BulkyBook.Utility\\BulkyBook.Utility.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jenifer\\source\\repos\\SampleApplication\\BulkyBook.Utility\\BulkyBook.Utility.csproj": {
+    "C:\\Users\\Jenifer\\source\\repos\\BulkyBook\\BulkyBook.Utility\\BulkyBook.Utility.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jenifer\\source\\repos\\SampleApplication\\BulkyBook.Utility\\BulkyBook.Utility.csproj",
+        "projectUniqueName": "C:\\Users\\Jenifer\\source\\repos\\BulkyBook\\BulkyBook.Utility\\BulkyBook.Utility.csproj",
         "projectName": "BulkyBook.Utility",
-        "projectPath": "C:\\Users\\Jenifer\\source\\repos\\SampleApplication\\BulkyBook.Utility\\BulkyBook.Utility.csproj",
+        "projectPath": "C:\\Users\\Jenifer\\source\\repos\\BulkyBook\\BulkyBook.Utility\\BulkyBook.Utility.csproj",
         "packagesPath": "C:\\Users\\Jenifer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jenifer\\source\\repos\\SampleApplication\\BulkyBook.Utility\\obj\\",
+        "outputPath": "C:\\Users\\Jenifer\\source\\repos\\BulkyBook\\BulkyBook.Utility\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jenifer\\AppData\\Roaming\\NuGet\\NuGet.Config",
