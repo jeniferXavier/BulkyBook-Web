@@ -15,7 +15,8 @@ namespace BulkyBook.DataAccess
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
-        public DbSet<Company> Companys { get; set; }
+        public DbSet<Company> Companies { get; set; }
+        public DbSet<ShoppingCart> ShoppingCarts { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -110,6 +111,36 @@ namespace BulkyBook.DataAccess
                     ImageUrl = " ",
                     CategoryId = 1
                 });
+            modelBuilder.Entity<Company>().HasData(new Company {
+                Id=1,
+                Name="Readers Club",
+                StreetAddress="101 Main St",
+                City="Lake Grove",
+                State="OR",
+                PostalCode="9705",
+                PhoneNumber="8994905894" 
+            },
+            new Company
+            {
+                Id = 2,
+                Name = "Tech Solutions",
+                StreetAddress = "12 Tech St",
+                City = "Tech City",
+                State = "IL",
+                PostalCode = "97056",
+                PhoneNumber = "8946547574"
+            },
+            new Company
+            {
+                Id = 3,
+                Name = "Vivid Books",
+                StreetAddress = "10 Vivid St",
+                City = "Vid City",
+                State = "CA",
+                PostalCode = "97705",
+                PhoneNumber = "746274637"
+            });
+            
         }
     }
 }

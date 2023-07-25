@@ -28,15 +28,13 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
 
         public IActionResult Upsert(int? id)
         {
-            Company company = new Company();
-            
             if (id == 0 || id == null)
             {
-                return View(company);
+                return View(new Company());
             }
             else
             {
-                company = _unitOfWork.Company.Get(u => u.Id == id);
+              Company company = _unitOfWork.Company.Get(u => u.Id == id);
                 return View(company);
             }
         }

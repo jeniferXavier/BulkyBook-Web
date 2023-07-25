@@ -48,21 +48,21 @@ namespace BulkyBook.DataAccess.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDateTime = new DateTime(2023, 7, 23, 18, 33, 51, 306, DateTimeKind.Local).AddTicks(3853),
+                            CreatedDateTime = new DateTime(2023, 7, 24, 17, 54, 33, 132, DateTimeKind.Local).AddTicks(6092),
                             DisplayOrder = 1,
                             Name = "Action"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDateTime = new DateTime(2023, 7, 23, 18, 33, 51, 306, DateTimeKind.Local).AddTicks(3858),
+                            CreatedDateTime = new DateTime(2023, 7, 24, 17, 54, 33, 132, DateTimeKind.Local).AddTicks(6095),
                             DisplayOrder = 2,
                             Name = "SciFic"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDateTime = new DateTime(2023, 7, 23, 18, 33, 51, 306, DateTimeKind.Local).AddTicks(3861),
+                            CreatedDateTime = new DateTime(2023, 7, 24, 17, 54, 33, 132, DateTimeKind.Local).AddTicks(6097),
                             DisplayOrder = 3,
                             Name = "History"
                         });
@@ -97,7 +97,39 @@ namespace BulkyBook.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Companys");
+                    b.ToTable("Companies");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            City = "Lake Grove",
+                            Name = "Readers Club",
+                            PhoneNumber = "8994905894",
+                            PostalCode = "9705",
+                            State = "OR",
+                            StreetAddress = "101 Main St"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            City = "Tech City",
+                            Name = "Tech Solutions",
+                            PhoneNumber = "8946547574",
+                            PostalCode = "97056",
+                            State = "IL",
+                            StreetAddress = "12 Tech St"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            City = "Vid City",
+                            Name = "Vivid Books",
+                            PhoneNumber = "746274637",
+                            PostalCode = "97705",
+                            State = "CA",
+                            StreetAddress = "10 Vivid St"
+                        });
                 });
 
             modelBuilder.Entity("BulkyBook.Models.Models.Product", b =>
@@ -234,6 +266,33 @@ namespace BulkyBook.DataAccess.Migrations
                             Price50 = 22.0,
                             Title = "Leaves and Wonders"
                         });
+                });
+
+            modelBuilder.Entity("BulkyBook.Models.Models.ShoppingCart", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ApplicationUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("Count")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ApplicationUserId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ShoppingCarts");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -449,6 +508,9 @@ namespace BulkyBook.DataAccess.Migrations
                     b.Property<string>("City")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("CompanyId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -462,6 +524,8 @@ namespace BulkyBook.DataAccess.Migrations
                     b.Property<string>("StreetAddress")
                         .HasColumnType("nvarchar(max)");
 
+                    b.HasIndex("CompanyId");
+
                     b.HasDiscriminator().HasValue("ApplicationUser");
                 });
 
@@ -474,6 +538,25 @@ namespace BulkyBook.DataAccess.Migrations
                         .IsRequired();
 
                     b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("BulkyBook.Models.Models.ShoppingCart", b =>
+                {
+                    b.HasOne("BulkyBook.Models.Models.ApplicationUser", "ApplicationUser")
+                        .WithMany()
+                        .HasForeignKey("ApplicationUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("BulkyBook.Models.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ApplicationUser");
+
+                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -525,6 +608,15 @@ namespace BulkyBook.DataAccess.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("BulkyBook.Models.Models.ApplicationUser", b =>
+                {
+                    b.HasOne("BulkyBook.Models.Models.Company", "Company")
+                        .WithMany()
+                        .HasForeignKey("CompanyId");
+
+                    b.Navigation("Company");
                 });
 #pragma warning restore 612, 618
         }
